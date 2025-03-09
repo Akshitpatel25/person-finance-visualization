@@ -29,7 +29,7 @@ export default function ExpensesChart() {
       <BarChart data={data}>
         <XAxis dataKey="month" />
         <YAxis />
-        <Tooltip formatter={(value) => `$${value.toFixed(2)}`} /> {/* Format tooltip */}
+        <Tooltip formatter={(value) => `$${value.toFixed(2)}`} /> 
         <Bar dataKey="total" fill="#8884d8" />
       </BarChart>
     </ResponsiveContainer>

@@ -23,7 +23,7 @@ export default function CategoryChart() {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <PieChart>
-        <Pie data={data} dataKey="total" nameKey="category" cx="50%" cy="50%" outerRadius={100}>
+        <Pie data={data} dataKey="total" nameKey="category" cx="50%" cy="50%" outerRadius={80}>
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
           ))}
