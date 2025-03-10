@@ -12,11 +12,14 @@ export default function AddTransactionForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await fetch("/api/transactions", {
+    const res = await fetch("/api/transactions", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount, date, description, category }),
     });
+    if (res.status === 200) {
+      window.location.reload();
+    }
 
     setAmount("");
     setDate("");
